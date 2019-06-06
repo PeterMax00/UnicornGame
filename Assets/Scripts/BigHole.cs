@@ -12,6 +12,45 @@ public class BigHole : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "shotBlue" || other.tag == "shotYellow" || other.tag == "shotRed")
+        {
+            ScoreScript.scoreValue += 1;
+
+          //  Debug.Log("SCORE " + ScoreScript.scoreValue);
+
+
+
+
+            if (this.transform.position.x == -1)
+            {
+                BigHoleSpawner.bigRed = false;
+                Destroy(other.gameObject);
+                Destroy(this.gameObject);
+               
+
+            }
+            else if (this.transform.position.x == 0)
+            {
+                BigHoleSpawner.bigBlue = false;
+                Destroy(other.gameObject);
+                Destroy(this.gameObject);
+               
+
+            }
+            else if (this.transform.position.x == 1)
+            {
+                BigHoleSpawner.bigYellow = false;
+                Destroy(other.gameObject);
+                Destroy(this.gameObject);
+               
+            }
+         
+            
+        }
+    }
     void Update()
     {
         
@@ -26,7 +65,7 @@ public class BigHole : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+   /* private void OnMouseDown()
     {
 
         // Debug.Log("PLAYER X: " + player.transform.position.x);
@@ -58,5 +97,5 @@ public class BigHole : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-    }
+    } */
 }

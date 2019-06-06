@@ -4,20 +4,45 @@ using UnityEngine;
 
 public class MyMouse : MonoBehaviour
 {
+    
     public static Vector3 playerPos;
-    bool beingDragged;
+    public static bool beingDragged;
+    public static bool onRed, onYellow, onBlue;
     Vector3 initialWorldMousePos = Vector3.zero;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-
+        onRed = false;
+        onYellow = false;
+        onBlue = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log("RED: " + onRed);
+       // Debug.Log("BLUE: " + onBlue);
+       // Debug.Log("YELLOW: " + onYellow);
+
         playerPos = player.transform.position;
+        if(playerPos.x >0 && playerPos.x < 1)
+        {
+            onRed = true;
+            onBlue = false;
+            onYellow = false;
+        }else if(playerPos.x > 1 && playerPos.x < 2)
+        {
+            onRed = false;
+            onBlue = true;
+            onYellow = false;
+        }else if(playerPos.x > 2 && playerPos.x < 3)
+        {
+            onRed = false;
+            onBlue = false;
+            onYellow = true;
+
+        }
        // Debug.Log("Dragging = " + beingDragged);
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10;

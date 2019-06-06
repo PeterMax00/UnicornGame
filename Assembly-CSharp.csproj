@@ -60,23 +60,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\blueShots.cs" />
     <Compile Include="Assets\FollowPlayer.cs" />
+    <Compile Include="Assets\FrameMove.cs" />
     <Compile Include="Assets\IceCream.cs" />
     <Compile Include="Assets\IceSpawner.cs" />
+    <Compile Include="Assets\LostColor.cs" />
     <Compile Include="Assets\MoveCamera.cs" />
+    <Compile Include="Assets\newScr.cs" />
     <Compile Include="Assets\PlaySounds.cs" />
+    <Compile Include="Assets\redShots.cs" />
     <Compile Include="Assets\Scripts\BigHole.cs" />
     <Compile Include="Assets\Scripts\BigHoleSpawner.cs" />
+    <Compile Include="Assets\Scripts\BlueShotSpawner.cs" />
     <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\DetectHoles.cs" />
     <Compile Include="Assets\Scripts\Follow.cs" />
     <Compile Include="Assets\Scripts\Hole.cs" />
     <Compile Include="Assets\Scripts\MyMouse.cs" />
+    <Compile Include="Assets\Scripts\RedShotSpawner.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
+    <Compile Include="Assets\Scripts\ShotMove.cs" />
+    <Compile Include="Assets\Scripts\ShotSpwaner.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
+    <Compile Include="Assets\Scripts\YellowShotSpawner.cs" />
+    <Compile Include="Assets\ShotDestroyer.cs" />
     <Compile Include="Assets\SoundManagerScript.cs" />
     <Compile Include="Assets\TapToMenu.cs" />
+    <Compile Include="Assets\yellowShots.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Unity Projects/RainbowRun3D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

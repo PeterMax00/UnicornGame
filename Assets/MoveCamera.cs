@@ -9,7 +9,7 @@ public class MoveCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         startY = transform.position.y;
+       //  startY = transform.position.y;
         
     }
 
@@ -17,9 +17,9 @@ public class MoveCamera : MonoBehaviour
     void Update()
     {
 
-        if (player.transform.position.x != 1.2f)
+       // if (player.transform.position.x != 1.2f)
         {
-            transform.position = new Vector3(player.transform.position.x - 1f, transform.position.y, transform.position.z);
+           // transform.position = new Vector3(player.transform.position.x - 1f, transform.position.y, transform.position.z);
         }
     }
        

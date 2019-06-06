@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    private float starTimeBtwSpawn = 3f;
+    private float starTimeBtwSpawn = 1f;
 
     private float timeBtwSpawn;
    // public GameObject[] Bigfloor;
     public GameObject[] floors;
+    public GameObject frame;
     
 
     private void Update()
@@ -16,7 +17,7 @@ public class Spawner : MonoBehaviour
        // Debug.Log("SPAWN: " + starTimeBtwSpawn);
         if(starTimeBtwSpawn > 0.1f)
         {
-         starTimeBtwSpawn =3 - ScoreScript.scoreValue * 0.01f;
+         starTimeBtwSpawn =1 - ScoreScript.scoreValue * 0.01f;
        }
      
        
@@ -26,21 +27,24 @@ public class Spawner : MonoBehaviour
             int rand = Random.Range(0, floors.Length);
             if (rand == 0)
             {
-                Debug.Log("RED " + BigHoleSpawner.bigRed);
+               // Debug.Log("RED " + BigHoleSpawner.bigRed);
                 if(BigHoleSpawner.bigRed == false)
                      Instantiate(floors[rand],new Vector3(-1,0.01f,0), Quaternion.identity);
+                    Instantiate(frame, new Vector3(-1, 0.01f, 0), Quaternion.identity);
             } else if (rand == 1)
             {
-                Debug.Log("BLUE " + BigHoleSpawner.bigBlue);
-                if (BigHoleSpawner.bigBlue == false)
-                    Instantiate(floors[rand], new Vector3(0, 0.01f, 0), Quaternion.identity);
+                //Debug.Log("BLUE " + BigHoleSpawner.bigBlue);
+              if (BigHoleSpawner.bigBlue == false)
+                  Instantiate(floors[rand], new Vector3(0, 0.01f, 0), Quaternion.identity);
+                  Instantiate(frame, new Vector3(0, 0.01f, 0), Quaternion.identity);
 
             }
             else if(rand == 2)
             {
-                Debug.Log("YELLOW " + BigHoleSpawner.bigYellow);
-                if (BigHoleSpawner.bigYellow == false)
-                    Instantiate(floors[rand], new Vector3(1, 0.01f, 0), Quaternion.identity);
+                //Debug.Log("YELLOW " + BigHoleSpawner.bigYellow);
+              if (BigHoleSpawner.bigYellow == false)
+                  Instantiate(floors[rand], new Vector3(1, 0.01f, 0), Quaternion.identity);
+                  Instantiate(frame, new Vector3(1, 0.01f, 0), Quaternion.identity);
             }
             
             timeBtwSpawn = starTimeBtwSpawn;

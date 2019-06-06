@@ -7,12 +7,14 @@ public class DetectHoles : MonoBehaviour
 {
     static public float parX;
     public static int counter;
+    public static bool lost;
     // Start is called before the first frame update
 
 
     // Update is called once per frame
     private void Start()
     {
+        lost = false;
         counter = 0;
     }
     void Update()
@@ -36,8 +38,9 @@ public class DetectHoles : MonoBehaviour
         }
         if (other.tag == "bigBlue" || other.tag == "bigYellow" || other.tag == "bigRed")
         {
+            lost = true;
             counter = counter + 1;
-            Debug.Log("COUNT = " + counter);
+           // Debug.Log("COUNT = " + counter);
         }
 
     }

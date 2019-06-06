@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class IceCream : MonoBehaviour
 {
-    //public AudioSource sound;
+    public AudioSource sound;
    
     private float speed = 1;
 
     private void Start()
     {
-       // sound = GetComponent<AudioSource>();
+        sound = GetComponent<AudioSource>();
 
     }
 
@@ -38,8 +38,8 @@ public class IceCream : MonoBehaviour
         if (other.tag == "Player")
         {
             ScoreScript.scoreValue += 10;
-            // audioSrc.PlayOneShot(iceSound);
-            //sound.Play();
+           // audioSrc.PlayOneShot(iceSound);
+           // sound.Play();
             Destroy(this.gameObject);
         }
 
