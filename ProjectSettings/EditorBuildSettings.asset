@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameNewCtrl.unity
     guid: 325688fa59b72e84c9e9a9b62862464e
+  - enabled: 1
+    path: Assets/Scenes/GameNewCtrlH.unity
+    guid: 52ea7ac0f3a139d4494558bb58b028e3
   m_configObjects: {}

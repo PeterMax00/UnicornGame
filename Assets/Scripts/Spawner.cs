@@ -29,22 +29,22 @@ public class Spawner : MonoBehaviour
             {
                // Debug.Log("RED " + BigHoleSpawner.bigRed);
                 if(BigHoleSpawner.bigRed == false)
-                     Instantiate(floors[rand],new Vector3(-1,0.01f,0), Quaternion.identity);
-                    Instantiate(frame, new Vector3(-1, 0.01f, 0), Quaternion.identity);
+                     Instantiate(floors[rand],new Vector3(-1,0.5f,0), Quaternion.identity);
+                    Instantiate(frame, new Vector3(-1, 0.5f, 0), Quaternion.identity);
             } else if (rand == 1)
             {
                 //Debug.Log("BLUE " + BigHoleSpawner.bigBlue);
               if (BigHoleSpawner.bigBlue == false)
-                  Instantiate(floors[rand], new Vector3(0, 0.01f, 0), Quaternion.identity);
-                  Instantiate(frame, new Vector3(0, 0.01f, 0), Quaternion.identity);
+                  Instantiate(floors[rand], new Vector3(0, 0.5f, 0), Quaternion.identity);
+                  Instantiate(frame, new Vector3(0, 0.5f, 0), Quaternion.identity);
 
             }
             else if(rand == 2)
             {
                 //Debug.Log("YELLOW " + BigHoleSpawner.bigYellow);
               if (BigHoleSpawner.bigYellow == false)
-                  Instantiate(floors[rand], new Vector3(1, 0.01f, 0), Quaternion.identity);
-                  Instantiate(frame, new Vector3(1, 0.01f, 0), Quaternion.identity);
+                  Instantiate(floors[rand], new Vector3(1, 0.5f, 0), Quaternion.identity);
+                  Instantiate(frame, new Vector3(1, 0.5f, 0), Quaternion.identity);
             }
             
             timeBtwSpawn = starTimeBtwSpawn;
