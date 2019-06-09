@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 5
+  lastUpdatedAtString: 2019-06-09T11:19:08.744+02:00
+  initializedAtString: 2019-06-09T11:19:07.824+02:00
+  entries:
+  - path: Library\ArtifactDB
+    fullPath: D:\Studia\2sem1\Mobilki\Swiezaki\Repo\UnicornGame\Library\ArtifactDB
+    projectPath: Library\ArtifactDB
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: D:\Studia\2sem1\Mobilki\Swiezaki\Repo\UnicornGame\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\SourceAssetDB
+    fullPath: D:\Studia\2sem1\Mobilki\Swiezaki\Repo\UnicornGame\Library\SourceAssetDB
+    projectPath: Library\SourceAssetDB
+    originalPath: 
+    status: 3
+    staged: 0
