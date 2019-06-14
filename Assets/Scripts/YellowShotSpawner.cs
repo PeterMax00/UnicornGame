@@ -23,13 +23,13 @@ public class YellowShotSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("RED SHOTS:" + yellowShotCounter);
+        //Debug.Log("RED SHOTS:" + yellowShotCounter);
 
         if (yellowShotCounter > 0)
         {
             if (timeDelay >= 0)
             {
-                Debug.Log(timeDelay);
+               // Debug.Log(timeDelay);
                 timeDelay -= Time.deltaTime;
 
             }
@@ -37,7 +37,7 @@ public class YellowShotSpawner : MonoBehaviour
             {
                 timeDelay = maxTimeDelay;
                 yellowShotCounter -= 1;
-                Debug.Log("LOAD SHOT");
+               // Debug.Log("LOAD SHOT");
             }
         }
 
@@ -49,14 +49,14 @@ public class YellowShotSpawner : MonoBehaviour
     private void OnMouseDown()
     {
 
-        if ((MyMouse.onYellow) && (!MyMouse.beingDragged))
+        if ((MyMouse.onYellow) && (MyMouse.shootActive))
         {
             if (yellowShotCounter < maxShotsNumber)
             {
                 yellowPressed = true;
                 yellowShotCounter += 1;
             }
-
+            MyMouse.shootActive = false;
         }
     }
 }

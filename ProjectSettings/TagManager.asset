@@ -20,6 +20,7 @@ TagManager:
   - bigYellow
   - ice
   - table
+  - music
   layers:
   - Default
   - TransparentFX

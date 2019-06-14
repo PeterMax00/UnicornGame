@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    public static AudioClip iceSound, stringTensionSound;
+    public static AudioClip iceSound,wrongSound, stringTensionSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
     void Start()
     {
         iceSound = Resources.Load<AudioClip>("iceSound");
+        wrongSound = Resources.Load<AudioClip>("wrongSound");
         //stringTensionSound = Resources.Load<AudioClip>("stringTension");
         audioSrc = GetComponent<AudioSource>();
 
@@ -28,6 +29,10 @@ public class SoundManagerScript : MonoBehaviour
             case "iceSound":
                 audioSrc.PlayOneShot(iceSound);
                 break;
+            case "wrongSound":
+                audioSrc.PlayOneShot(wrongSound);
+                break;
+
             case "stringTension":
 
                 break;

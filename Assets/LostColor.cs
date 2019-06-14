@@ -24,10 +24,12 @@ public class LostColor : MonoBehaviour
     {
         if (DetectHoles.lost)
         {
+            Handheld.Vibrate();
             score.text = "LOST " + DetectHoles.counter + " COLOR!";
             counter -= Time.deltaTime;
             if(counter <= 0)
             {
+                
                 DetectHoles.lost = false;
                 score.text = "";
             }

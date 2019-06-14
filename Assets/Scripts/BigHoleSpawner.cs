@@ -30,8 +30,8 @@ public class BigHoleSpawner : MonoBehaviour
                 if (bigRed != true)
                 {
                     bigRed = true;
-                    Debug.Log("RED IS BLINKING");
-                    Instantiate(BigFloor[i], new Vector3(i - 1, 0.01f, 50), Quaternion.identity);
+                   // Debug.Log("RED IS BLINKING");
+                    Instantiate(BigFloor[i], new Vector3(i - 1, 0.52f, 50), Quaternion.identity);
                 }
             }
                
@@ -40,8 +40,8 @@ public class BigHoleSpawner : MonoBehaviour
                 if (bigBlue != true)
                 {
                     bigBlue = true;
-                    Debug.Log("BLUE IS BLINKING");
-                    Instantiate(BigFloor[i], new Vector3(i - 1, 0.01f, 50), Quaternion.identity);
+                   // Debug.Log("BLUE IS BLINKING");
+                    Instantiate(BigFloor[i], new Vector3(i - 1, 0.52f, 50), Quaternion.identity);
                 }
             }
                 
@@ -50,8 +50,8 @@ public class BigHoleSpawner : MonoBehaviour
                 if (bigYellow != true)
                 {
                     bigYellow = true;
-                    Debug.Log("YELLOW IS BLINKING");
-                    Instantiate(BigFloor[i], new Vector3(i - 1, 0.01f, 50), Quaternion.identity);
+                   // Debug.Log("YELLOW IS BLINKING");
+                    Instantiate(BigFloor[i], new Vector3(i - 1, 0.52f, 50), Quaternion.identity);
                 }
             }
                

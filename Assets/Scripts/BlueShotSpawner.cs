@@ -6,9 +6,9 @@ public class BlueShotSpawner : MonoBehaviour
 {
     public static bool bluePressed;
     public static int blueShotCounter;
-    public float maxTimeDelay;
+    public float maxTimeDelay = 2.0f;
     private float timeDelay;
-    public int maxShotsNumber;
+    public int maxShotsNumber = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +22,13 @@ public class BlueShotSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("RED SHOTS:" + blueShotCounter);
+        //Debug.Log("RED SHOTS:" + blueShotCounter);
 
         if (blueShotCounter > 0)
         {
             if (timeDelay >= 0)
             {
-                Debug.Log(timeDelay);
+               // Debug.Log(timeDelay);
                 timeDelay -= Time.deltaTime;
 
             }
@@ -36,7 +36,7 @@ public class BlueShotSpawner : MonoBehaviour
             {
                 timeDelay = maxTimeDelay;
                 blueShotCounter -= 1;
-                Debug.Log("LOAD SHOT");
+                //Debug.Log("LOAD SHOT");
             }
         }
 
@@ -50,7 +50,7 @@ public class BlueShotSpawner : MonoBehaviour
     private void OnMouseDown()
     {
 
-        if ((MyMouse.onBlue) && ( !MyMouse.beingDragged))
+        if ((MyMouse.onBlue) && (MyMouse.shootActive))
         {
             
             if (blueShotCounter < maxShotsNumber)
@@ -58,7 +58,7 @@ public class BlueShotSpawner : MonoBehaviour
                 bluePressed = true;
                 blueShotCounter += 1;
             }
-
+            MyMouse.shootActive = false;
         }
     }
 }

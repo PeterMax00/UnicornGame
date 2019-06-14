@@ -22,13 +22,13 @@ public class RedShotSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("RED SHOTS:" + redShotCounter);
+        //Debug.Log("RED SHOTS:" + redShotCounter);
         
         if(redShotCounter > 0)
         {
             if (timeDelay >= 0)
             {
-                Debug.Log(timeDelay);
+               // Debug.Log(timeDelay);
                 timeDelay -= Time.deltaTime;
 
             }
@@ -36,7 +36,7 @@ public class RedShotSpawner : MonoBehaviour
             {
                 timeDelay = maxTimeDelay;
                 redShotCounter -= 1;
-                Debug.Log("LOAD SHOT");
+               // Debug.Log("LOAD SHOT");
             }
         }
        
@@ -48,14 +48,14 @@ public class RedShotSpawner : MonoBehaviour
     private void OnMouseDown()
     {
 
-        if ((MyMouse.onRed) && (!MyMouse.beingDragged))
+        if ((MyMouse.onRed) && (MyMouse.shootActive))
         {
             if(redShotCounter < maxShotsNumber)
             {
                 redPressed = true;
                 redShotCounter += 1;
             }
-            
+            MyMouse.shootActive = false;
         }
     }
 }

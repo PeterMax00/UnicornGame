@@ -8,12 +8,20 @@ public class DetectHoles : MonoBehaviour
     static public float parX;
     public static int counter;
     public static bool lost;
+    public static bool freezeLost;
+    public static bool stopRandBlue;
+    public static bool stopRandRed;
+    public static bool stopRandYellow;
     // Start is called before the first frame update
 
 
     // Update is called once per frame
     private void Start()
     {
+        stopRandBlue = false;
+        stopRandYellow = false;
+        stopRandRed = false;
+        freezeLost = false;
         lost = false;
         counter = 0;
     }
@@ -23,7 +31,8 @@ public class DetectHoles : MonoBehaviour
         {
 
             //SceneManager.LoadScene("GameNewCtrl", LoadSceneMode.Single);
-            SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+            freezeLost = true;
+            //SceneManager.LoadScene("MenuH", LoadSceneMode.Single);
         }
             
     }
@@ -40,7 +49,20 @@ public class DetectHoles : MonoBehaviour
         {
             lost = true;
             counter = counter + 1;
-           // Debug.Log("COUNT = " + counter);
+
+            if(other.tag == "bigBlue")
+            {
+                stopRandBlue = true;
+            }
+            if (other.tag == "bigRed")
+            {
+                stopRandRed = true;
+            }
+            if (other.tag == "bigYellow")
+            {
+                stopRandYellow = true;
+            }
+            // Debug.Log("COUNT = " + counter);
         }
 
     }

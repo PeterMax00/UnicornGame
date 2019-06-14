@@ -19,6 +19,6 @@ public class StartGame : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("GameNewCtrl", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameNewCtrlH", LoadSceneMode.Single);
     }
 }

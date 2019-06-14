@@ -10,12 +10,13 @@ public class Hole : MonoBehaviour
     public static float speed = 2;
     public float acceleration;
     public GameObject player;
+    public static bool freezGameOver;
     static public float parX;
-  
+    public static Vector3 holePosition;
 
     private void Start()
     {
-      
+        freezGameOver = false;
     }
     private void Update()
     {
@@ -57,10 +58,25 @@ public class Hole : MonoBehaviour
         if (other.tag == "Player") 
         {
             //ScoreScript.gameOver = "GAMEOVER";
-            
+
+            /* GameObject[] bigBlues = GameObject.FindGameObjectsWithTag("bigBlue");
+             GameObject[] bigReds = GameObject.FindGameObjectsWithTag("bigRed");
+             GameObject[] bigYellows = GameObject.FindGameObjectsWithTag("bigYellow");
+
+             GameObject[] holeBlues = GameObject.FindGameObjectsWithTag("holeBlue");
+             GameObject[] holeReds = GameObject.FindGameObjectsWithTag("holeRed");
+             GameObject[] holeYellows = GameObject.FindGameObjectsWithTag("holeYellow");
+
+             */
+            freezGameOver = true;
+            Handheld.Vibrate();
+            SoundManagerScript.PlaySound("iceSound");
+            Debug.Log("STOP, change color hole");
+
+            holePosition = this.transform.position;
 
 
-            Reset();
+            //Reset();
         }
     
         if(other.tag == "shotBlue" || other.tag == "shotYellow" || other.tag == "shotRed")
@@ -79,7 +95,7 @@ public class Hole : MonoBehaviour
     {
         ScoreScript.scoreValue = 0;
         //SceneManager.LoadScene("GameNewCtrl", LoadSceneMode.Single);
-        SceneManager.LoadScene("Menu",LoadSceneMode.Single);
+        SceneManager.LoadScene("MenuH",LoadSceneMode.Single);
         
     }
 
